@@ -4,13 +4,12 @@
 		<User>
 			<DisplayName>{{info.name}} Email</DisplayName>
 		</User>
-
-		{%- if imap.host %}
 		<Account>
 			<AccountType>email</AccountType>
 			<Action>settings</Action>
 			<ServiceHome>{{info.url}}</ServiceHome>
 
+			{%- if imap.host %}
 			<Protocol>
 				<Type>IMAP</Type>
 				<TTL>1</TTL>
@@ -27,15 +26,9 @@
 				<Encryption>{{imapenc}}</Encryption>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
-		</Account>
-		{% endif -%}
+			{% endif -%}
 
-		{%- if pop.host %}
-		<Account>
-			<AccountType>email</AccountType>
-			<Action>settings</Action>
-			<ServiceHome>{{info.url}}</ServiceHome>
-
+			{%- if pop.host %}
 			<Protocol>
 				<Type>POP</Type>
 				<TTL>1</TTL>
@@ -52,15 +45,9 @@
 				<Encryption>{{popenc}}</Encryption>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
-		</Account>
-		{% endif -%}
+			{% endif -%}
 
-		{%- if smtp.host %}
-		<Account>
-			<AccountType>email</AccountType>
-			<Action>settings</Action>
-			<ServiceHome>{{info.url}}</ServiceHome>
-
+			{%- if smtp.host %}
 			<Protocol>
 				<Type>SMTP</Type>
 				<TTL>1</TTL>
@@ -77,7 +64,7 @@
 				<Encryption>{{smtpenc}}</Encryption>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
+			{% endif -%}
 		</Account>
-		{% endif -%}
 	</Response>
 </Autodiscover>
