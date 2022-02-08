@@ -19,8 +19,7 @@
 
 				<LoginName>{{email}}</LoginName>
 
-				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
+				<DomainRequired>off</DomainRequired>
 
 				<SPA>off</SPA>
 				<Encryption>{{imapenc}}</Encryption>
@@ -38,8 +37,7 @@
 
 				<LoginName>{{email}}</LoginName>
 
-				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
+				<DomainRequired>off</DomainRequired>
 
 				<SPA>off</SPA>
 				<Encryption>{{popenc}}</Encryption>
@@ -57,8 +55,7 @@
 
 				<LoginName>{{email}}</LoginName>
 
-				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
+				<DomainRequired>off</DomainRequired>
 
 				<SPA>off</SPA>
 				<Encryption>{{smtpenc}}</Encryption>
